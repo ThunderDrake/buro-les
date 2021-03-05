@@ -1,0 +1,63 @@
+<section class="calculator">
+  <div class="container calculator__container">
+    <h2 class="calculator__title">Рассчитайте стоимость проекта своего участка</h2>
+    <form id="calculatorForm">
+      <fieldset id="calculationForm">
+        <div class="calculator__input-square">
+          <label class="calculator__label" for="square">Площадь участка, м<sup>2</sup></label>
+          <input class="calculator__input" type="number" name="square" id="square">
+        </div>
+        <div class="calculator__selector">
+          <label class="calculator__label" for="projectType">Какой вариант проекта вам нужен?</label>
+          <select class="calculator__select" name="projectType" id="projectType">
+            <option value="projectType1">Эконом</option>
+            <option value="projectType2">Стандарт</option>
+            <option value="projectType3">Премиум</option>
+          </select>
+        </div>
+        <div class="calculator__radio">
+          <div class="calculator__radio-title">Вам потребуется геодезическая съёмка?</div>
+          <label>
+            <input class="calculator__radio-box" type="radio" name="geodesy" id="geodesyYes" checked>
+            <span class="calculator__radio-label">Да</span>
+          </label>
+          <label>
+            <input class="calculator__radio-box" type="radio" name="geodesy" id="geodesyNo">
+            <span class="calculator__radio-label">Нет</span>
+          </label>
+        </div>
+        <div class="calculator__radio">
+          <div class="calculator__radio-title">
+            Вам потребуется визуализация проекта?
+          </div>
+          <label>
+            <input class="calculator__radio-box" type="radio" name="visually" id="visuallyYes" checked>
+            <span class="calculator__radio-label">Да</span>
+          </label>
+          <label>
+            <input class="calculator__radio-box" type="radio" name="visually" id="visuallyNo">
+            <span class="calculator__radio-label">Нет</span>
+          </label>
+        </div>
+      </fieldset>
+      <div class="calculator__descr">
+        <p>Эскизный проект — оптимально, если все работы по участку будут выполняться нашим бюро. Все сопутствующие чертежи разрабатываются при реализации строго по проектной документации</p>
+        <p>Будут разработаны следующие документы:</p>
+        <ul class="calculator__descr-list">
+          <li class="calculator__descr-list-item">Эскиз генеральный план</li>
+          <li class="calculator__descr-list-item">Эскиз видовых точек</li>
+          <li class="calculator__descr-list-item">Дендроплан</li>
+          <li class="calculator__descr-list-item">План цветочного оформления</li>
+          <li class="calculator__descr-list-item">Смета на ландшафтные работы</li>
+        </ul>
+        <div class="calculator__descr-time">Срок выполнения: 17-20 дней</div>
+      </div>
+      <fieldset id="sendingForm" class="form-sending">
+        <div class="form-sending__title">Оставьте номер телефона и получите индивидуальное предложение через 10 минут</div>
+        <input class="form-sending__input" type="text" name="name" id="name" placeholder="Ваше имя">
+        <input class="form-sending__input" type="tel" name="phone" id="phone" placeholder="Ваш телефон">
+        <button type="submit" class="button form-button">Получить предложение</button>
+      </fieldset>
+    </form>
+  </div>
+</section>

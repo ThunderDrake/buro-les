@@ -33,7 +33,8 @@ const svgSprites = () => {
         }
       },
     }))
-    .pipe(dest('./app/img'));
+    .pipe(dest('./app/img'))
+    .pipe(browserSync.stream());
 }
 
 const resources = () => {
@@ -202,7 +203,7 @@ const watchFiles = () => {
   watch('./src/img/**.jpg', imgToApp);
   watch('./src/img/**.jpeg', imgToApp);
   watch('./src/img/**.png', imgToApp);
-  watch('./src/img/**.svg', svgSprites);
+  watch('./src/img/svg/**.svg', svgSprites);
   watch('./src/fonts/**', fonts);
   watch('./src/fonts/**', fontsStyle);
 }

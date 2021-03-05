@@ -6,14 +6,23 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#111111">
-	<title>New site</title>
+	<title>Ландшафтное бюро "Лес"</title>
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 	<div class="site-container">
 		@include('html/header.html')
+		<main class="main">
+      @include('html/hero.html')
+      @include('html/services.html')
+      @include('html/divider-1.html')
+      @include('html/packages.html')
+      @include('html/advantages.html')
+      @include('html/calculator.html')
+      @include('html/divider-2.html')
+    </main>
 		@include('html/footer.html')
-		<!-- @include('html/h1.html') пример инклуда -->
+		@include('html/modal.html')
 	</div>
 	<script src="js/main.js"></script>
 </body>

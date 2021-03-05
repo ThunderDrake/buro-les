@@ -1,0 +1,172 @@
+#calculatorForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.calculator {
+  margin-bottom: 95px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__label {
+    margin-right: 24px;
+  }
+
+  &__input-square {
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 2px solid var(--color-text);
+    padding-left: 15px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background-color: var(--color-main);
+  }
+
+  &__selector {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    select {
+      padding: 0 16px;
+      width: 270px;
+      height: 45px;
+      background-color: var(--color-main);
+      cursor: pointer;
+    }
+  }
+
+  &__radio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    &-title {
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
+    label {
+      margin-right: 24px;
+    }
+
+    &-box {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+
+      &:checked {
+        + span::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 8px;
+        border: 3px solid var(--color-main);
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-main);
+        opacity: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+#calculationForm {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  max-width: 290px;
+  font-size: 18px;
+}
+
+.calculator__descr {
+  display: flex;
+  flex-direction: column;
+  max-width: 370px;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 130%;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-list {
+    list-style-image: url("../img/list-bullet.png");
+    margin: 10px;
+    margin-left: 30px;
+  }
+
+  &-list-item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-sending {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  width: 33.3333%;
+
+  &__title {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  &__input {
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 2px solid var(--color-text);
+    padding-left: 16px;
+    height: 32px;
+    background-color: transparent;
+  }
+}

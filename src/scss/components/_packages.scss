@@ -1,0 +1,96 @@
+.packages {
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__descr {
+    margin-bottom: 52px;
+    max-width: 570px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 95px;
+  }
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  max-width: 370px;
+  background-color: #e3eadc;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-bg);
+    background-image: url("../img/package-economy.png");
+  }
+
+  &__list {
+    list-style-image: url("../img/list-bullet.png");
+    margin: 0;
+    margin-bottom: 32px;
+    padding: 0 32px 0 62px;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    margin-bottom: 12px;
+    font-family: "Oswald";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  &__button {
+    margin-bottom: 90px;
+  }
+
+  &__download {
+    margin-bottom: 32px;
+    font-family: "Lato", serif;
+    font-size: 18px;
+    text-decoration: underline;
+    color: var(--color-text);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--left {
+    filter: drop-shadow(-5px 6px 15px rgba(0, 0, 0, 0.35));
+  }
+
+  &--middle {
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.45));
+  }
+
+  &--right {
+    filter: drop-shadow(5px 6px 15px rgba(0, 0, 0, 0.35));
+  }
+}

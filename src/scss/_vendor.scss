@@ -1,3 +1,27 @@
 @import "./vendor/normalize";
+@import "./vendor/bootstrap-grid.min";
 
 // @import "./vendor/simple-grid";
+.button {
+  border: none;
+  padding: 1rem 2rem;
+  min-width: 100px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--color-text);
+  background-color: var(--color-main);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 12px 25px rgba(78, 101, 52, 0.25);
+    background-color: #97c166;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  &:active {
+    background-color: #7d9d58;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+}

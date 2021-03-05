@@ -33,12 +33,13 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-util": "^3.0.8",
-    "stylelint": "^13.3.2",
+    "stylelint": "^13.11.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.17.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
     "vinyl-ftp": "^0.6.1",
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,0 +1,72 @@
+.divider {
+  margin-bottom: 95px;
+  padding: 95px 0;
+  background-image: url("../img/divider-bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 970px;
+  }
+
+  &__descr {
+    max-width: 420px;
+    color: var(--color-bg);
+  }
+
+  &__text {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 1.375rem;
+  }
+
+  &__form {
+    display: block;
+    width: 470px;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    background-image: url("../img/divider-bg-2.jpg");
+
+    .divider__text {
+      font-family: "Lato";
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}
+
+.divider-form {
+  &__input {
+    margin-bottom: 1.5rem;
+    border: 2px solid #f7f9f5;
+    padding-left: 12px;
+    height: 50px;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 18px;
+    background: rgba(247, 249, 245, 0.6);
+
+    &::placeholder {
+      color: var(--color-text);
+    }
+  }
+
+  &__button {
+    padding: 12px;
+  }
+}

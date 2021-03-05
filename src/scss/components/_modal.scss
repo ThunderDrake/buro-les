@@ -1,0 +1,105 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__dialog {
+  margin: 40px auto;
+  border: 10px solid var(--color-main);
+  max-width: 1000px;
+}
+
+.modal__img {
+  height: auto;
+  max-width: 465px;
+  object-fit: cover;
+}
+
+.modal__content {
+  position: relative;
+  display: flex;
+  overflow-y: auto;
+  width: 100%;
+  max-height: 80vh;
+  background-color: #fff;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin: 55px 30px 55px 35px;
+  width: 100%;
+}
+
+.modal__close {
+  position: absolute;
+  right: 14px;
+  top: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: #000;
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal__title {
+  margin-bottom: 65px;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.modal__input {
+  display: block;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--color-main);
+  padding-left: 12px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  background: inherit;
+
+  &::placeholder {
+    color: rgba(26, 33, 18, 0.4);
+  }
+}
+
+.modal .btn {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
