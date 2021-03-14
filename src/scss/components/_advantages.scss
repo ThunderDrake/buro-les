@@ -12,6 +12,32 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
     gap: 30px;
+
+    @include break768 {
+      justify-content: center;
+      grid-template-columns: repeat(2, 240px);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include break480 {
+      grid-template-columns: repeat(2, 210px);
+      gap: 20px;
+    }
+
+    @include break425 {
+      grid-template-columns: 220px;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  @include break768 {
+    margin-bottom: 65px;
+    padding: 65px 0;
+  }
+
+  @include break425 {
+    margin-bottom: 35px;
+    padding: 35px 0;
   }
 }
 
@@ -28,6 +54,11 @@
     margin-bottom: 16px;
     width: 100px;
     height: 100px;
+
+    @include break768 {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &__title {
@@ -37,6 +68,10 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
+
+    @include break768 {
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -44,5 +79,13 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
+
+    @include break1000 {
+      font-size: 14px;
+    }
+  }
+
+  @include break480 {
+    padding: 16px 8px;
   }
 }

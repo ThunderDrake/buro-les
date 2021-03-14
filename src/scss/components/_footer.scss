@@ -6,12 +6,26 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 24px 0;
+    padding: 24px;
+
+    @include break320 {
+      padding: 16px;
+    }
   }
 
   &__logo {
     width: 100px;
     height: 110px;
+
+    @include break720 {
+      width: 80px;
+      height: 90px;
+    }
+
+    @include break425 {
+      width: 100px;
+      height: auto;
+    }
   }
 
   &__nav {
@@ -26,6 +40,12 @@
 
     &-item {
       margin-bottom: 16px;
+
+      @include break320 {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     &-link {
@@ -51,6 +71,16 @@
         }
       }
     }
+
+    @include break720 {
+      font-size: 16px;
+    }
+
+    @include break425 {
+      align-self: center;
+      font-size: 18px;
+      text-align: right;
+    }
   }
 
   &__contacts {
@@ -59,10 +89,39 @@
     font-family: "Lato", serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 130%;
 
     &-title {
       margin-bottom: 8px;
+    }
+
+    @include break720 {
+      font-size: 16px;
+    }
+
+    @include break425 {
+      width: 50%;
+
+      & &-item:nth-child(4) {
+        align-items: center;
+
+        .contacts-item__link {
+          width: 150px;
+        }
+      }
+    }
+
+    @include break320 {
+      width: 50%;
+      font-size: 14px;
+
+      & &-item:nth-child(4) {
+        align-items: center;
+
+        .contacts-item__link {
+          width: 130px;
+        }
+      }
     }
   }
 
@@ -80,6 +139,36 @@
       font-size: 15px;
       line-height: 18px;
       color: rgba(26, 33, 18, 0.3);
+
+      @include break720 {
+        font-size: 12px;
+      }
+
+      @include break655 {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 16px;
+      }
+
+      @include break425 {
+        align-items: flex-start;
+        margin-top: 24px;
+      }
+    }
+
+    &-text {
+      @include break768 {
+        width: 210px;
+      }
+
+      @include break425 {
+        width: auto;
+      }
+
+      @include break320 {
+        width: 210px;
+        text-align: left;
+      }
     }
 
     &-privacy {
@@ -96,6 +185,10 @@
       &:hover {
         color: var(--color-text);
         transition: color 0.2s linear;
+      }
+
+      @include break425 {
+        margin-left: 0;
       }
     }
 
@@ -116,6 +209,27 @@
         color: var(--color-text);
         transition: color 0.2s linear;
       }
+
+      @include break480 {
+        white-space: nowrap;
+      }
+    }
+
+    @include break720 {
+      margin-top: 16px;
+    }
+
+    @include break655 {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: auto;
+      width: 50%;
+      text-align: right;
+    }
+
+    @include break425 {
+      align-items: flex-start;
+      width: 100%;
     }
   }
 }
@@ -148,12 +262,25 @@
     margin-right: 8px;
     width: 20px;
     height: 20px;
+
+    @include break320 {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__link {
     position: relative;
     margin-bottom: 8px;
     color: var(--color-text);
+  }
+
+  @include break425 {
+    font-size: 14px;
+  }
+
+  @include break320 {
+    font-size: 12px;
   }
 }
 
@@ -165,12 +292,22 @@
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
   }
 
   &__icon {
     margin-right: 8px;
     width: 24px;
     height: 24px;
+
+    @include break320 {
+      margin-right: 4px;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__name {
@@ -199,5 +336,22 @@
         transition: opacity 0.2s ease;
       }
     }
+
+    @include break320 {
+      font-size: 12px;
+    }
+  }
+
+  @include break655 {
+    width: 50%;
+  }
+
+  @include break425 {
+    align-self: center;
+    width: auto;
+  }
+
+  @include break320 {
+    font-size: 12px;
   }
 }

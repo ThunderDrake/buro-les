@@ -9,48 +9,124 @@
         </div>
         <div class="calculator__selector">
           <label class="calculator__label" for="projectType">Какой вариант проекта вам нужен?</label>
-          <select class="calculator__select" name="projectType" id="projectType">
-            <option value="projectType1">Эконом</option>
-            <option value="projectType2">Стандарт</option>
-            <option value="projectType3">Премиум</option>
+          <select data-target="selector" class="calculator__select" name="projectType" id="projectType">
+            <option value="variant0">Эконом</option>
+            <option value="variant1">Стандарт</option>
+            <option value="variant2">Премиум</option>
           </select>
         </div>
         <div class="calculator__radio">
           <div class="calculator__radio-title">Вам потребуется геодезическая съёмка?</div>
-          <label>
-            <input class="calculator__radio-box" type="radio" name="geodesy" id="geodesyYes" checked>
-            <span class="calculator__radio-label">Да</span>
-          </label>
-          <label>
-            <input class="calculator__radio-box" type="radio" name="geodesy" id="geodesyNo">
-            <span class="calculator__radio-label">Нет</span>
-          </label>
+          <div class="calculator__radio-wrapper">
+            <label>
+              <input data-target="variant3" class="calculator__radio-box" type="radio" name="geodesy" id="geodesyYes" checked>
+              <span class="calculator__radio-label">Да</span>
+            </label>
+            <label>
+              <input data-target="variant4" class="calculator__radio-box" type="radio" name="geodesy" id="geodesyNo">
+              <span class="calculator__radio-label">Нет</span>
+            </label>
+          </div>
         </div>
         <div class="calculator__radio">
           <div class="calculator__radio-title">
             Вам потребуется визуализация проекта?
           </div>
-          <label>
-            <input class="calculator__radio-box" type="radio" name="visually" id="visuallyYes" checked>
-            <span class="calculator__radio-label">Да</span>
-          </label>
-          <label>
-            <input class="calculator__radio-box" type="radio" name="visually" id="visuallyNo">
-            <span class="calculator__radio-label">Нет</span>
-          </label>
+          <div class="calculator__radio-wrapper">
+            <label>
+              <input data-target="variant5" class="calculator__radio-box" type="radio" name="visually" id="visuallyYes" checked>
+              <span class="calculator__radio-label">Да</span>
+            </label>
+            <label>
+              <input data-target="variant6" class="calculator__radio-box" type="radio" name="visually" id="visuallyNo">
+              <span class="calculator__radio-label">Нет</span>
+            </label>
+          </div>
         </div>
       </fieldset>
-      <div class="calculator__descr">
-        <p>Эскизный проект — оптимально, если все работы по участку будут выполняться нашим бюро. Все сопутствующие чертежи разрабатываются при реализации строго по проектной документации</p>
+      <div class="calculator__descr descr-active" id="variant0">
+        <!-- <p>Сад, задача которого максимальная функциональность, сочетающая в себе практичность и минимальный уход. Растения из российских питомников (декоративность через 5-7 лет).</p> -->
         <p>Будут разработаны следующие документы:</p>
         <ul class="calculator__descr-list">
-          <li class="calculator__descr-list-item">Эскиз генеральный план</li>
-          <li class="calculator__descr-list-item">Эскиз видовых точек</li>
+          <li class="calculator__descr-list-item">Эскиз генерального плана</li>
           <li class="calculator__descr-list-item">Дендроплан</li>
-          <li class="calculator__descr-list-item">План цветочного оформления</li>
-          <li class="calculator__descr-list-item">Смета на ландшафтные работы</li>
+          <li class="calculator__descr-list-item">Разбивочный чертеж</li>
+          <li class="calculator__descr-list-item">Схема расстановки осветительных элементов</li>
+          <li class="calculator__descr-list-item">План дорожно-тропиночной сети</li>
+          <li class="calculator__descr-list-item">Ассортиментная ведомость растений</li>
+          <li class="calculator__descr-list-item">Укрупненная схема на ландшафтные работы</li>
         </ul>
-        <div class="calculator__descr-time">Срок выполнения: 17-20 дней</div>
+        <div class="calculator__descr-time">Срок разработки: 20-25 дней</div>
+      </div>
+      <div class="calculator__descr" id="variant1">
+        <!-- <p>Оптимальный вариант для создания комфортной среды на своем участке. Материалы среднего ценового диапазона, наличие инженерных систем, которые существенно сокращают время на уход. Растения российского и немецкого происхождения (декоративность через 2-3 года)</p> -->
+        <p>Будут разработаны следующие документы:</p>
+        <ul class="calculator__descr-list">
+          <li class="calculator__descr-list-item">Генеральный план с фотоаналогами</li>
+          <li class="calculator__descr-list-item">Дендроплан</li>
+          <li class="calculator__descr-list-item">Разбивочный чертеж</li>
+          <li class="calculator__descr-list-item">Схема расстановки осветительных элементов</li>
+          <li class="calculator__descr-list-item">План дорожно-тропиночной сети</li>
+          <li class="calculator__descr-list-item">Ассортиментная ведомость растений</li>
+          <li class="calculator__descr-list-item">Укрупненная схема на ландшафтные работы</li>
+          <li class="calculator__descr-list-item">Разработка 2-ух концепций</li>
+          <li class="calculator__descr-list-item">Схема раскладки мощения</li>
+          <li class="calculator__descr-list-item">Визуализация основных точек в 3D</li>
+          <li class="calculator__descr-list-item">План вертикальной планировки</li>
+          <li class="calculator__descr-list-item">Пояснительная записка</li>
+        </ul>
+        <div class="calculator__descr-time">Срок разработки: 30-45 дней</div>
+      </div>
+      <div class="calculator__descr" id="variant2">
+        <!-- <p>Вы получаете картинку из журнала, где все идеально и красиво. Применяются премиальные отделочные материалы, наличие всех инженерных систем, взрослые растения из Германии (декоративность в первый год).</p> -->
+        <p>Будут разработаны следующие документы:</p>
+        <ul class="calculator__descr-list">
+          <li class="calculator__descr-list-item">Генеральный план с фотоаналогами</li>
+          <li class="calculator__descr-list-item">Дендроплан</li>
+          <li class="calculator__descr-list-item">Разбивочный чертеж</li>
+          <li class="calculator__descr-list-item">Проект освещения</li>
+          <li class="calculator__descr-list-item">Схема расстановки осветительных элементов</li>
+          <li class="calculator__descr-list-item">План дорожно-тропиночной сети</li>
+          <li class="calculator__descr-list-item">Схема раскладки мощения</li>
+          <li class="calculator__descr-list-item">Схема дорожных одежд</li>
+          <li class="calculator__descr-list-item">Ассортиментная ведомость растений</li>
+          <li class="calculator__descr-list-item">План системы автоматического полива</li>
+          <li class="calculator__descr-list-item">Укрупненная схема на ландшафтные работы</li>
+          <li class="calculator__descr-list-item">Разработка 3-ех концепций</li>
+          <li class="calculator__descr-list-item">Визуализация основных точек в 3D</li>
+          <li class="calculator__descr-list-item">План вертикальной планировки</li>
+          <li class="calculator__descr-list-item">Пояснительная записка</li>
+          <li class="calculator__descr-list-item">Список рекомендаций по уходу</li>
+        </ul>
+        <div class="calculator__descr-time">Срок выполнения: 60-75 дней</div>
+      </div>
+      <div class="calculator__descr" id="variant3">
+        <p>Разрабатываем фотореалистичные 3d эскизы Вашего будущего сада, как правило, для каждого проекта делается от 15 до 25 эскизов. В результате чего у Вас складывается 100% понимание как будет выглядеть Ваш участок в будущем</p>
+      </div>
+      <div class="calculator__descr" id="variant4">
+        <p>Если 3d визуализацию не разрабатывать, скорость разработки проектной документации увеличивается на 30%, а также оптимизируется бюджет.</p>
+      </div>
+      <div class="calculator__descr" id="variant5">
+        <p>На геодезической съемке (топографическом плане) должна отражается вся существующая ситуация участка:</p>
+        <ul class="calculator__descr-list">
+          <li class="calculator__descr-list-item">Границы участка</li>
+          <li class="calculator__descr-list-item">Рельеф</li>
+          <li class="calculator__descr-list-item">Постройки</li>
+          <li class="calculator__descr-list-item">Отметки ступеней и площадок</li>
+          <li class="calculator__descr-list-item">Деревья и кустарники</li>
+        </ul>
+      </div>
+      <div class="calculator__descr" id="variant6">
+        <p>Если у Вас нет топографической съемки не проблема — Вы можете заказать ее у нас.</p>
+        <p>В штате профессиональный геодезист, который знает требования проектного отдела на 100%.</p>
+        <!-- <p>Стоимость работ может меняться в зависимости от сложности участка:</p>
+        <ul class="calculator__descr-list">
+          <li class="calculator__descr-list-item">Границы участка</li>
+          <li class="calculator__descr-list-item">Рельеф</li>
+          <li class="calculator__descr-list-item">Постройки</li>
+          <li class="calculator__descr-list-item">Отметки ступеней и площадок</li>
+          <li class="calculator__descr-list-item">Деревья и кустарники</li>
+        </ul> -->
       </div>
       <fieldset id="sendingForm" class="form-sending">
         <div class="form-sending__title">Оставьте номер телефона и получите индивидуальное предложение через 10 минут</div>

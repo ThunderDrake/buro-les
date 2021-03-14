@@ -8,7 +8,7 @@
   min-width: 100px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 130%;
   color: var(--color-text);
   background-color: var(--color-main);
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -23,5 +23,10 @@
   &:active {
     background-color: #7d9d58;
     transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  @include break1000 {
+    padding: 16px;
+    font-size: 20px;
   }
 }

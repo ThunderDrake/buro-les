@@ -2,6 +2,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+
+  @include break768 {
+    justify-content: space-between;
+  }
+
+  @include break600 {
+    flex-wrap: wrap;
+  }
 }
 
 .calculator {
@@ -9,14 +17,34 @@
 
   &__title {
     margin-bottom: 50px;
+
+    @include break425 {
+      margin-bottom: 24px;
+    }
   }
 
   &__label {
     margin-right: 24px;
+
+    @include break600 {
+      font-size: 16px;
+    }
+
+    @include break425 {
+      font-size: 20px;
+    }
   }
 
   &__input-square {
     margin-bottom: 24px;
+
+    @include break600 {
+      width: 50%;
+    }
+
+    @include break425 {
+      width: auto;
+    }
   }
 
   &__input {
@@ -27,6 +55,10 @@
     height: 35px;
     text-align: center;
     background-color: var(--color-main);
+
+    @include break600 {
+      width: 80px;
+    }
   }
 
   &__selector {
@@ -44,6 +76,23 @@
       height: 45px;
       background-color: var(--color-main);
       cursor: pointer;
+
+      @include break600 {
+        width: 100%;
+        height: 30px;
+      }
+
+      @include break425 {
+        height: 40px;
+      }
+    }
+
+    @include break600 {
+      width: 50%;
+    }
+
+    @include break425 {
+      width: auto;
     }
   }
 
@@ -52,13 +101,29 @@
     flex-wrap: wrap;
     margin-bottom: 24px;
 
+    &-wrapper {
+      display: flex;
+    }
+
     &-title {
       margin-bottom: 8px;
       width: 100%;
+
+      @include break600 {
+        font-size: 16px;
+      }
+
+      @include break425 {
+        font-size: 20px;
+      }
     }
 
     label {
       margin-right: 24px;
+
+      @include break425 {
+        margin-right: 32px;
+      }
     }
 
     &-box {
@@ -103,6 +168,23 @@
         transform: translateY(-50%);
       }
     }
+
+    @include break600 {
+      width: 50%;
+    }
+
+    @include break425 {
+      flex-direction: column;
+      width: auto;
+    }
+  }
+
+  @include break768 {
+    margin-bottom: 65px;
+  }
+
+  @include break425 {
+    margin-bottom: 35px;
   }
 }
 
@@ -113,10 +195,22 @@
   padding: 0;
   max-width: 290px;
   font-size: 18px;
+
+  @include break768 {
+    max-width: 50%;
+  }
+
+  @include break600 {
+    flex-flow: row wrap;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .calculator__descr {
-  display: flex;
+  display: none;
   flex-direction: column;
   max-width: 370px;
   font-family: "Lato", serif;
@@ -145,6 +239,18 @@
       margin-bottom: 0;
     }
   }
+
+  @include break768 {
+    display: none;
+  }
+}
+
+.descr-active {
+  display: flex;
+
+  @include break768 {
+    display: none;
+  }
 }
 
 .form-sending {
@@ -159,6 +265,10 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 130%;
+
+    @include break600 {
+      margin-bottom: 24px;
+    }
   }
 
   &__input {
@@ -168,5 +278,15 @@
     padding-left: 16px;
     height: 32px;
     background-color: transparent;
+  }
+
+  @include break768 {
+    width: auto;
+    max-width: 50%;
+  }
+
+  @include break600 {
+    width: 100%;
+    max-width: none;
   }
 }

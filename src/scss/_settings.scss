@@ -100,4 +100,17 @@ h2 {
   font-weight: 400;
   font-size: 3rem;
   line-height: 100%;
+
+  @include break1000 {
+    font-size: 36px;
+  }
+
+  @include break480 {
+    font-size: 28px;
+  }
+
+  @include break375 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
 }

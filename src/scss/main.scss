@@ -5,13 +5,18 @@
 @import "settings";
 
 // CUSTOM COMPONENTS STYLES
-// .burger {
-//   --burger-width: 40px;
-//   --burger-height: 20px;
-//   --burger-line-height: 2px;
+.burger {
+  --burger-width: 40px;
+  --burger-height: 25px;
+  --burger-line-height: 5px;
 
-//   @include burger;
-// }
+  @include burger;
+
+  border: none;
+  color: var(--color-main);
+  background-color: inherit;
+}
+
 @import "./components/header";
 @import "./components/hero";
 @import "./components/services";

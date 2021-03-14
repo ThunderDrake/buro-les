@@ -3,11 +3,25 @@
 
   &__container {
     display: flex;
+
+    @include break768 {
+      flex-wrap: wrap;
+    }
   }
 
   &__text {
     margin-right: 30px;
     max-width: 370px;
+
+    @include break1000 {
+      max-width: 300px;
+    }
+
+    @include break768 {
+      margin-right: 0;
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__descr {
@@ -15,17 +29,69 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 130%;
+
+    @include break1000 {
+      font-size: 16px;
+    }
+
+    @include break768 {
+      margin-bottom: 32px;
+      max-width: 570px;
+
+      p {
+        margin: 0;
+        margin-bottom: 8px;
+      }
+    }
+
+    @include break375 {
+      font-size: 14px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+    @include break600 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include break600 {
+      &:hover {
+        .service-hover,
+        .service {
+          overflow: hidden;
+          height: 120px;
+          transition: height 0.25s;
+        }
+
+        .service:hover {
+          height: 200px;
+        }
+      }
+    }
+
+    @include break600 {
+      gap: 16px;
+    }
+  }
+
+  @include break768 {
+    margin-bottom: 80px;
+  }
+
+  @include break425 {
+    margin-bottom: 50px;
   }
 }
 
 .service {
   position: relative;
+  overflow: hidden;
   max-width: 370px;
 
   &::before {
@@ -51,11 +117,19 @@
     background-color: var(--color-text);
     transform: translateX(50%);
     transition: background-color 0.5s, width 0.5s, height 0.1s;
+
+    @include break600 {
+      display: none;
+    }
   }
 
   &__img {
     width: 100%;
     height: 100%;
+
+    @include break600 {
+      object-fit: cover;
+    }
   }
 
   &__title {
@@ -66,8 +140,22 @@
     margin: 0;
     font-weight: 400;
     font-size: 30px;
-    line-height: 44px;
+    line-height: 130%;
     color: var(--color-bg);
+
+    @include break1000 {
+      left: 1rem;
+      top: 1rem;
+      font-size: 24px;
+    }
+
+    @include break768 {
+      font-size: 30px;
+    }
+
+    @include break480 {
+      font-size: 24px;
+    }
   }
 
   &:hover {
@@ -84,9 +172,21 @@
     }
 
     .service-hover {
+      bottom: 1.5rem;
       opacity: 1;
-      transition: opacity 0.5s;
+      transition: opacity 0.5s, bottom 0.01s;
+
+      @include break600 {
+        bottom: 0;
+      }
     }
+  }
+
+  @include break600 {
+    width: 100%;
+    height: 120px;
+    max-width: none;
+    max-height: 200px;
   }
 }
 
@@ -94,11 +194,11 @@
   position: absolute;
   left: 2rem;
   right: 2rem;
-  bottom: 1.5rem;
+  bottom: 100%;
   z-index: 15;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, bottom 0.01s;
 
   &__text {
     margin-bottom: 24px;
@@ -108,11 +208,27 @@
     line-height: 130%;
     text-align: left;
     color: var(--color-bg);
+
+    @include break1000 {
+      font-size: 16px;
+    }
+
+    @include break480 {
+      font-size: 14px;
+    }
   }
 
   &__button {
     display: inline-block;
     padding: 12px 32px;
     color: var(--color-text);
+  }
+
+  @include break600 {
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
   }
 }
