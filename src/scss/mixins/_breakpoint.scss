@@ -36,8 +36,20 @@ $maxWidthContainer: 1170;
   }
 }
 
+@mixin break1024 {
+  @media (max-width: (1024px)) {
+    @content;
+  }
+}
+
 @mixin break1000 {
   @media (max-width: (1000px)) {
+    @content;
+  }
+}
+
+@mixin break940 {
+  @media (max-width: (940px)) {
     @content;
   }
 }

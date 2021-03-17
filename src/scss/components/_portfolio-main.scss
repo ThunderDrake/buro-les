@@ -1,0 +1,296 @@
+.portfolio-main__head {
+  margin-bottom: 80px;
+
+  @include break1024 {
+    margin-bottom: 40px;
+  }
+}
+
+.project {
+  margin-bottom: 48px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 59px;
+
+    @include break1024 {
+      font-size: 36px;
+      line-height: 130%;
+    }
+
+    @include break480 {
+      font-size: 24px;
+    }
+
+    @include break375 {
+      font-size: 20px;
+    }
+  }
+
+  &__visual {
+    display: flex;
+    margin-bottom: 40px;
+
+    @include break1024 {
+      margin-bottom: 24px;
+    }
+
+    @include break720 {
+      flex-direction: column;
+    }
+
+    @include break425 {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    display: flex;
+
+    @include break480 {
+      flex-direction: column;
+    }
+  }
+}
+
+.project-slider {
+  margin-right: 30px;
+  height: 530px;
+  min-width: 370px;
+  max-width: 740px;
+
+  &__top {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 450px;
+
+    @include break425 {
+      height: 80vw;
+    }
+  }
+
+  &__thumb {
+    padding: 0;
+    height: 70px;
+    box-sizing: border-box;
+
+    .swiper-slide {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .swiper-slide-thumb-active {
+      &::before {
+        background-color: transparent;
+      }
+    }
+
+    @include break425 {
+      height: 10vw;
+    }
+  }
+
+  @include break768 {
+    margin-right: 8px;
+  }
+
+  @include break720 {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  @include break425 {
+    height: auto;
+    min-width: auto;
+  }
+}
+
+.swiper-slide {
+  width: 100%;
+}
+
+.slide-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shortdescr {
+  margin: 0;
+  padding: 24px 18px;
+  min-width: 290px;
+  max-width: 370px;
+  background-color: #e3eadc;
+
+  &__item {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+
+    @include break1024 {
+      font-size: 20px;
+    }
+
+    @include break375 {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+
+    @include break375 {
+      font-size: 14px;
+    }
+  }
+
+  @include break1024 {
+    padding: 24px 14px;
+  }
+
+  @include break720 {
+    max-width: none;
+  }
+
+  @include break375 {
+    padding: 16px 14px;
+  }
+}
+
+.project-points {
+  margin-right: 30px;
+  width: 50%;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: "Oswald", serif;
+    font-size: 32px;
+    line-height: 130%;
+
+    @include break1024 {
+      font-size: 28px;
+    }
+
+    @include break720 {
+      font-size: 24px;
+    }
+
+    @include break375 {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    list-style-image: url("../img/list-bullet.png");
+    margin: 0;
+    padding-left: 18px;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+
+    &-item {
+      margin-bottom: 8px;
+    }
+
+    @include break1024 {
+      font-size: 18px;
+    }
+
+    @include break720 {
+      font-size: 16px;
+    }
+
+    @include break480 {
+      display: block;
+      column-count: 2;
+      column-gap: 15px;
+    }
+
+    @include break375 {
+      font-size: 15px;
+    }
+  }
+
+  @include break480 {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+.project-solution {
+  width: 50%;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: "Oswald", serif;
+    font-size: 32px;
+    line-height: 130%;
+
+    @include break1024 {
+      font-size: 28px;
+    }
+
+    @include break720 {
+      font-size: 24px;
+    }
+
+    @include break375 {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    line-height: 130%;
+
+    @include break1024 {
+      font-size: 18px;
+    }
+
+    @include break720 {
+      font-size: 16px;
+    }
+
+    @include break375 {
+      font-size: 15px;
+    }
+  }
+
+  @include break480 {
+    margin: 0;
+    width: 100%;
+  }
+}

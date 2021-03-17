@@ -1,0 +1,33 @@
+.inner-head {
+  margin-bottom: 120px;
+
+  &__title {
+    @include break1000 {
+      font-size: 36px;
+    }
+
+    @include break480 {
+      font-size: 28px;
+    }
+  }
+
+  &__descr {
+    max-width: 700px;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+
+    @include break1000 {
+      font-size: 18px;
+    }
+
+    @include break480 {
+      font-size: 16px;
+    }
+  }
+
+  @include break1000 {
+    margin-bottom: 50px;
+  }
+}

@@ -16,6 +16,8 @@
   }
 
   &__logo {
+    width: 100px;
+
     @include break768 {
       margin-left: calc(25vw);
     }
